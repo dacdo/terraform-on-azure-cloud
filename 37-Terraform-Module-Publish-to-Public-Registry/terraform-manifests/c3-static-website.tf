@@ -1,12 +1,11 @@
 # Call our Custom Terraform Module which we built earlier
 module "azure_static_website" {
-  #source = "./modules/azure-static-website"  
-  source  = "stacksimplify/staticwebsitepublic/azurerm"
-  version = "1.0.0"
+  source  = "dacdo/staticwebsitepublic/azurerm"
+  version = "1.0.1"
 
   # Resource Group
-  location            = "eastus"
-  resource_group_name = "myrg1"
+  location            = "Australia Central"
+  resource_group_name = "dac-my-rg"
 
   # Storage Account
   storage_account_name              = "staticwebsite"
